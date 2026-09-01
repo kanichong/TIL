@@ -42,6 +42,8 @@ truncate -s 10M lidar.img imu.img
 **블록장치로 연결**
 sudo losetup -f --show lidar.img
 sudo losetup -f --show imu.img
+-f 옵션을 넣으면 현재 비어있는 첫번째 loop device
+-d 옵션을 넣으면 분리
 
 **udev데몬의 단계별로 속성 출력**
 udevadm info --attribute-walk /dev/loop(N)
